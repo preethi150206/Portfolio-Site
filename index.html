@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preethika | AI Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(-45deg,#0f172a,#1e293b,#312e81,#0f172a);
+background-size:400% 400%;
+animation:bgAnimation 12s ease infinite;
+color:white;
+overflow-x:hidden;
+}
+
+@keyframes bgAnimation{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* Navbar */
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:20px;
+display:flex;
+justify-content:center;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+z-index:1000;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+/* Hero */
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:10px;
+}
+
+.hero h1 span{
+background:linear-gradient(90deg,#38bdf8,#8b5cf6,#ec4899);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero h3{
+color:#cbd5e1;
+font-weight:400;
+margin-bottom:15px;
+}
+
+.hero p{
+max-width:700px;
+line-height:1.8;
+margin:auto;
+color:#dbeafe;
+}
+
+.buttons{
+margin-top:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 30px;
+margin:10px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:.4s;
+}
+
+.primary{
+background:linear-gradient(90deg,#06b6d4,#8b5cf6);
+color:white;
+}
+
+.secondary{
+border:2px solid #38bdf8;
+color:white;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px rgba(139,92,246,.5);
+}
+
+/* Sections */
+section{
+padding:100px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:2.5rem;
+margin-bottom:50px;
+}
+
+/* Glass Cards */
+.card{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,0.1);
+padding:30px;
+border-radius:20px;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 30px rgba(139,92,246,.5);
+}
+
+/* About */
+.about p{
+text-align:center;
+line-height:1.9;
+}
+
+/* Skills */
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+}
+
+.skill{
+text-align:center;
+font-size:18px;
+}
+
+/* Education */
+.timeline{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+/* Project */
+.project-card h3{
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+.project-card a{
+color:#38bdf8;
+text-decoration:none;
+font-weight:600;
+}
+
+/* Certifications */
+.cert-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+/* Contact */
+.contact{
+text-align:center;
+}
+
+.contact a{
+color:#38bdf8;
+text-decoration:none;
+}
+
+.contact a:hover{
+text-decoration:underline;
+}
+
+/* Footer */
+footer{
+text-align:center;
+padding:20px;
+background:rgba(255,255,255,0.05);
+}
+
+/* Scroll Animation */
+.hidden{
+opacity:0;
+transform:translateY(40px);
+transition:all 1s ease;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+nav ul{
+gap:15px;
+font-size:14px;
+}
+
+.section-title{
+font-size:2rem;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#certifications">Certificates</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<div>
+
+<h1>Hello, I'm <span>Preethika</span></h1>
+
+<h3>AI & Computer Science Student</h3>
+
+<p>
+Dedicated AI-focused Computer Science student with experience in Python,
+Java Programming, Machine Learning Fundamentals, HTML, Data Structures,
+Data Analytics, and Intelligent System Design.
+</p>
+
+<div class="buttons">
+
+<a href="#projects" class="btn primary">
+View Projects
+</a>
+
+<a href="Preethi_resume.pdf" download class="btn secondary">
+Download Resume
+</a>
+
+</div>
+
+</div>
+</section>
+
+<section id="about" class="hidden">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="card about">
+
+<p>
+I am a passionate Computer Science student focused on Artificial Intelligence
+and Software Development. I enjoy solving real-world problems using technology,
+learning new tools, and building innovative solutions. My goal is to contribute
+to AI-driven applications and grow as a software professional.
+</p>
+
+</div>
+
+</section>
+
+<section id="skills" class="hidden">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skills-grid">
+
+<div class="card skill">🐍 Python</div>
+<div class="card skill">☕ Java</div>
+<div class="card skill">🌐 HTML</div>
+<div class="card skill">🎨 CSS</div>
+<div class="card skill">🤖 Machine Learning</div>
+<div class="card skill">📊 Data Analytics</div>
+<div class="card skill">📚 Data Structures</div>
+<div class="card skill">📈 Power BI</div>
+
+</div>
+
+</section>
+
+<section id="education" class="hidden">
+
+<h2 class="section-title">Education</h2>
+
+<div class="timeline">
+
+<div class="card">
+<h3>G. Pullaiah College of Engineering & Technology</h3>
+<p>B.Tech Computer Science (AI)</p>
+<p>CGPA: 6.8</p>
+</div>
+
+<div class="card">
+<h3>Sri Chaitanya Junior College</h3>
+<p>Intermediate</p>
+<p>73%</p>
+</div>
+
+<div class="card">
+<h3>Sri Chaitanya English Medium School</h3>
+<p>Secondary Education</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects" class="hidden">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="card project-card">
+
+<h3>🏥 AI Healthcare System</h3>
+
+<p>
+A smart healthcare system that uses Artificial Intelligence to help doctors
+and patients by predicting diseases, analyzing medical data and providing
+faster diagnoses.
+</p>
+
+<br>
+
+<a href="https://health-connect-rural-7d06c8a6.base44.app" target="_blank">
+View Project →
+</a>
+
+</div>
+
+</section>
+
+<section id="certifications" class="hidden">
+
+<h2 class="section-title">Certifications</h2>
+
+<div class="cert-grid">
+
+<div class="card">
+🏆 Oracle Generative AI
+</div>
+
+<div class="card">
+📊 Power BI – Simplilearn
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="hidden">
+
+<h2 class="section-title">Contact Me</h2>
+
+<div class="card contact">
+
+<p>
+📧
+<a href="mailto:preethi150206@gmail.com">
+preethi150206s@gmail.com
+</a>
+</p>
+
+<br>
+
+<p>
+💼
+<a href="https://www.linkedin.com/in/nallagatla-preethika-7458b12ba" target="_blank">
+LinkedIn Profile
+</a>
+</p>
+
+<br>
+
+<p>
+💻
+<a href="https://github.com/preethi150206" target="_blank">
+GitHub Profile
+</a>
+</p>
+
+</div>
+
+</section>
+
+<footer>
+© 2025 Preethika | AI Portfolio
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach((entry)=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll('.hidden').forEach((el)=>{
+observer.observe(el);
+});
+</script>
+
+</body>
+</html>
